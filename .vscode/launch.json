@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/Users/luanr/Downloads/VagasOcupacaoEHistoricoCompra-main/VagasOcupacaoEHistoricoCompra-main/production/index.html",
+            "url": "file:///C:/Users/luanr/Documents/VagasOcupacaoEHistoricoCompra/production/GestaoDeVagas.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

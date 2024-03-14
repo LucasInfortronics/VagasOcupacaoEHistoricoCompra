@@ -291,88 +291,51 @@
 
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
-                            <!-- <div class="col-md-3 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" id="chkLogradouro"
-                                        onclick="chkFiltraLogradouro()" /> Logradouro
-                                </label>
-                                <select class="select-logradouro" id="selectLogradouro" style="width: 100%"
-                                    disabled="disabled"></select>
-                            </div>
-
-                            <div class="col-md-1 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" disabled="disabled" id="chkSetor"
-                                        onclick="chkFiltraSetor()" />Setor
-                                </label>
-                                <select class="select-setor" id="selectSetor" style="width: 100%"
-                                    disabled="disabled"></select>
-                            </div>
-
-                            <div class="col-md-1 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" disabled="disabled" id="chkVaga"
-                                        onclick="chkFiltraVaga()" />Vaga
-                                </label>
-                                <select class="select-vaga" id="selectVaga" style="width: 100%"
-                                    disabled="disabled"></select>
-                            </div>
-
-                            <div class="col-md-2 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" id="chkStatus"
-                                        onclick="chkFiltraStatus()" />Status
-                                </label>
-                                <select class="select-status" id="selectStatus" style="width: 100%" disabled="disabled">
-                                    <option value="">Vagas Disponíveis</option>    
-                                    <option value="">Vagas Indisponíveis</option>
-                                    <option value="">Vagas Provaveís</option>
-                                </select>
-                            </div>
-
-                            
-                            <div class="col-md-2 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" id="chkPago"
-                                        onclick="chkFiltraPagamento()" />Pagamento
-                                </label>
-                                <select class="select-pago" id="selectPago" style="width: 100%" disabled="disabled">
-                                    <option value="">Vagas com Pagamento</option>    
-                                    <option value="">Vagas sem Pagamento</option>
-                                </select>
-                            </div> -->
-
-
-                            <div class="col-md-3 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: -10px;">
-                                <label class="form-checkbox-control" style="width: 227px;">
-                                    <input type="checkbox" name="checkbox" id="chkFiltroIntervaloCompra"
-                                        onclick="FiltroPorIntervaloCompra()" />Filtro por Data/Hora Compra
-                                </label>
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <div class="input-prepend input-group">
-                                            <span class="add-on input-group-addon"><i
-                                                    class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
-                                            <input type="text" style="width: 312px;" name="reservation-time"
-                                                id="reservation-time" class="form-control" disabled="disabled">
+                                    <div class="x_panel">
+                                        <div class="x_title">
+                                            <h2>Filtros<small> Vagas Ocupação</small></h2>
+                                            <ul class="nav navbar-right panel_toolbox">                                
+                                                <li style="margin-left: 63%;";><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+            
+                                                    <div>
+                                                        <label class="form-checkbox-control">
+                                                            <input type="checkbox" name="checkbox" id="chkFiltroIntervaloCompra"
+                                                                onclick="FiltroPorIntervaloCompra()" />Filtro por Data/Hora Compra
+                                                        </label>
+                                                        <div class="control-group">
+                                                            <div class="controls">
+                                                                <div class="input-prepend input-group">
+                                                                    <span class="add-on input-group-addon"><i
+                                                                            class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                                    <input type="text" name="reservation-time" id="reservation-time"
+                                                                        class="form-control" disabled="disabled">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+            
+                                                    </div>
+            
+                                                </div>
+            
+                                                <div class="col-sm-12 group">
+                                                    <button type="button" id="btnFiltraIntervaloCompra"
+                                                        onclick="FiltraPorIntervaloCompra()" class="btn btn-success"
+                                                        disabled="disabled">Filtrar</button>
+                                                    <!-- <button type="button" class="btn btn-info"></button> -->
+                                                </div>            
+                                            </div>                       
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 col-sm-12 col-xs-12 form-group"
-                                    style="margin-left: 347px; margin-bottom: 24px; margin-top: -44px;">
-                                    <button type="button" id="btnFiltraIntervaloCompra"
-                                        onclick="FiltraPorIntervaloCompra()" class="btn btn-success"
-                                        disabled="disabled">Filtrar</button>
-                                    <!-- <button type="button" class="btn btn-info"></button> -->
-                                </div>
-
                             </div>
+                         </div>
 
 
 

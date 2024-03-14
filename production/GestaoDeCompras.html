@@ -232,10 +232,7 @@
             </div>
             <div class="right_col" role="main">
                 <div class="">
-                    <div class="page-title">
-
-                    </div>
-
+                
                     <dv class="clearfix">
                 </div>
                 <div class="row tile_count">
@@ -288,7 +285,7 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Fitragens<small> Histórico de Compras</small></h2>
+                                <h2>Filtros<small> Histórico de Compras</small></h2>
                                 <ul class="nav navbar-right panel_toolbox">                                
                                     <li style="margin-left: 63%;";><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -376,7 +373,7 @@
 -->
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <div class="card-box table-responsive" style="min-height: 700px !important;">
+                                        <div class="card-box table-responsive" style="min-height: 700px !important; " id="Tabela">
                                             <table id="tblHistoricoCompras" class="display" style="width: 100%;">
                                                 <thead> 
                                                     <tr><th>Datas</th> <th>Tipo de Compra</th> <th>Forma de Pagamento</th> <th>Origem do Ponto de Venda</th> <th>Valor</th>  <th>CPF</th> <th>Usuario Operador</th></tr>
@@ -473,10 +470,10 @@
     });
 
     function FiltroPorIntervaloCompra() {
-        if (document.getElementById("chkFiltroIntervaloCompra").checked == true) {
+        if (document.getElementById("chkFiltroIntervaloCompra").checked == true) {           
             $("#reservation-time").prop('disabled', false);
-            $("#btnFiltraIntervaloCompra").prop('disabled', false);
-            document.getElementById("reservation-time").value = dateNow;
+            $("#btnFiltraIntervaloCompra").prop('disabled', false);   
+            document.getElementById("reservation-time").value = dateNow;        
         }
         else {
             $("#reservation-time").prop('disabled', true);
@@ -497,7 +494,7 @@
         document.getElementById("Tabela").innerHTML = ' <table id="tblHistoricoCompras" class="display" style="width: 100%;"> <thead> <tr><th>Datas</th> <th>Tipo de Compra</th> <th>Forma de Pagamento</th> <th>Origem do Ponto de Venda</th> <th>Valor</th>  <th>CPF</th> <th>Usuario Operador</th></tr> </thead><tbody id="tbody">    </tbody></table>';
         $.ajax({
             type: 'GET',
-            url: 'https://66.94.96.208/API_CigoEstacionamento/listar',
+            url: 'https://66.94.96.208/API_CigoEstacionamento/listar/listarpesquisaintervalo?ini=' + DataHoraInicial + '&fim=' + DataHoraFinal,
             dataType: 'json',
             data: '{}',
             contentType: "application/json; charset=utf-8",
@@ -876,8 +873,7 @@
     }
 
     function CarregaTabelaHistoricoCompras() {
-        document.getElementById("Tabela").innerHTML = ' <table id="tblHistoricoCompras" class="display" style="width: 100%;"> <thead> <tr><th>Datas</th> <th>Tipo de Compra</th> <th>Forma de Pagamento</th> <th>Origem do Ponto de Venda</th> <th>Valor</th>  <th>CPF</th> <th>Usuario Operador</th></tr> </thead><tbody id="tbody">    </tbody></table>';
-        $.ajax({
+         $.ajax({
             type: 'GET',
             url: 'https://66.94.96.208/API_CigoEstacionamento/listar',
             dataType: 'json',
@@ -1227,7 +1223,7 @@
                                     }
                                 }
                             }
-                        ).fnDraw();
+                        )
                     })
                     // lengthMenu: [
                     //                             [10, 25, 50, 100, -1],
@@ -1256,7 +1252,8 @@
             }
         });
     }
-
+    var dateNow = 0;
+    var monthNowNumber = 0;
     function TimerRelogio() {
         var today = new Date();
         var hr = today.getHours();
@@ -1268,7 +1265,7 @@
         sec = checkTime(sec);
         document.getElementById("time").innerHTML = hr + ":" + min + ":" + sec;
 
-        var months = [' Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+        var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
         var days = ['Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sabado'];
         var curWeekDay = days[today.getDay()];
         var curDay = today.getDate();
@@ -1276,9 +1273,52 @@
         var curYear = today.getFullYear();
         var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
         document.getElementById("date").innerHTML = date;
-
+        document.getElementById(" ")
         var time = setTimeout(function () { TimerRelogio() }, 1000);
+        if (curDay.length = 1) {
+            curDay = "0" + curDay;
+        }
 
+        if (curMonth != "") {
+            if (curMonth == 'Janeiro') {
+                monthNowNumber = '01';
+            }
+            else if (curMonth == 'Fevereiro') {
+                monthNowNumber = '02';
+            }
+            else if (curMonth == 'Março') {
+                monthNowNumber = '03';
+            }
+            else if (curMonth == 'Abril') {
+                monthNowNumber = '04';
+            }
+            else if (curMonth == 'Maio') {
+                monthNowNumber = '05';
+            }
+            else if (curMonth == 'Junho') {
+                monthNowNumber = '06';
+            }
+            else if (curMonth == 'Julho') {
+                monthNowNumber = '07';
+            }
+            else if (curMonth == 'Agosto') {
+                monthNowNumber = '08';
+            }
+            else if (curMonth == 'Setembro') {
+                monthNowNumber = '09';
+            }
+            else if (curMonth == 'Outubro') {
+                monthNowNumber = '10';
+            }
+            else if (curMonth == 'Novembro') {
+                monthNowNumber = '11';
+            }
+            else if (curMonth == 'Dezembro') {
+                monthNowNumber = '12';
+            }
+        }
+
+        dateNow = curDay + "/" + monthNowNumber + "/" + curYear + " " + "00" + ":" + "00" + " AM" + " - " + curDay + "/" + monthNowNumber + "/" + curYear + " " + hr + ":" + min + "";
     }
 
     function checkTime(i) {
