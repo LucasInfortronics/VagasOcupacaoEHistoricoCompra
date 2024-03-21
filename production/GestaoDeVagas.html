@@ -288,106 +288,157 @@
                         </div>
                     </div>
 
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Filtros <small>Vagas Ocupacão</small></h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
 
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <!-- <div class="col-md-3 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" id="chkLogradouro"
-                                        onclick="chkFiltraLogradouro()" /> Logradouro
-                                </label>
-                                <select class="select-logradouro" id="selectLogradouro" style="width: 100%"
-                                    disabled="disabled"></select>
-                            </div>
+                                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
 
-                            <div class="col-md-1 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" disabled="disabled" id="chkSetor"
-                                        onclick="chkFiltraSetor()" />Setor
-                                </label>
-                                <select class="select-setor" id="selectSetor" style="width: 100%"
-                                    disabled="disabled"></select>
-                            </div>
+                                        <div>
+                                            <label class="form-checkbox-control">
+                                                <input type="checkbox" name="checkbox" id="chkFiltroIntervaloCompra"
+                                                    onclick="FiltroPorIntervaloCompra()" />Filtro por Data/Hora Compra
+                                            </label>
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <div class="input-prepend input-group">
+                                                        <span class="add-on input-group-addon"><i
+                                                                class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                        <input type="text" name="reservation-time" id="reservation-time"
+                                                            class="form-control" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                            <div class="col-md-1 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" disabled="disabled" id="chkVaga"
-                                        onclick="chkFiltraVaga()" />Vaga
-                                </label>
-                                <select class="select-vaga" id="selectVaga" style="width: 100%"
-                                    disabled="disabled"></select>
-                            </div>
-
-                            <div class="col-md-2 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" id="chkStatus"
-                                        onclick="chkFiltraStatus()" />Status
-                                </label>
-                                <select class="select-status" id="selectStatus" style="width: 100%" disabled="disabled">
-                                    <option value="">Vagas Disponíveis</option>    
-                                    <option value="">Vagas Indisponíveis</option>
-                                    <option value="">Vagas Provaveís</option>
-                                </select>
-                            </div>
-
-                            
-                            <div class="col-md-2 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: 6px;">
-                                <label class="form-checkbox-control">
-                                    <input type="checkbox" name="checkbox" id="chkPago"
-                                        onclick="chkFiltraPagamento()" />Pagamento
-                                </label>
-                                <select class="select-pago" id="selectPago" style="width: 100%" disabled="disabled">
-                                    <option value="">Vagas com Pagamento</option>    
-                                    <option value="">Vagas sem Pagamento</option>
-                                </select>
-                            </div> -->
-
-
-                            <div class="col-md-3 col-sm-12 col-xs-12 form-group" style="margin-left: -10px;
-                            margin-bottom: -10px;">
-                                <label class="form-checkbox-control" style="width: 227px;">
-                                    <input type="checkbox" name="checkbox" id="chkFiltroIntervaloCompra"
-                                        onclick="FiltroPorIntervaloCompra()" />Filtro por Data/Hora Compra
-                                </label>
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <div class="input-prepend input-group">
-                                            <span class="add-on input-group-addon"><i
-                                                    class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
-                                            <input type="text" style="width: 312px;" name="reservation-time"
-                                                id="reservation-time" class="form-control" disabled="disabled">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-2 col-sm-12 col-xs-12 form-group"
-                                    style="margin-left: 347px; margin-bottom: 24px; margin-top: -44px;">
-                                    <button type="button" id="btnFiltraIntervaloCompra"
-                                        onclick="FiltraPorIntervaloCompra()" class="btn btn-success"
-                                        disabled="disabled">Filtrar</button>
-                                    <!-- <button type="button" class="btn btn-info"></button> -->
-                                </div>
 
+                                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+
+                                        <div>
+                                            <!-- <label class="form-checkbox-control" style="width: 227px;"> -->
+                                            <label class="form-checkbox-control">
+                                                <input type="checkbox" name="checkbox" id="chkFiltroIntervaloDetectado"
+                                                    onclick="FiltroPorIntervaloDetectado()" />Filtro por Data/Hora
+                                                Detecção
+                                            </label>
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <div class="input-prepend input-group">
+                                                        <span class="add-on input-group-addon"><i
+                                                                class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                        <!-- <input type="text" style="width: 312px;" name="reservation-time" -->
+                                                        <input type="text" name="reservation-time-filtro"
+                                                            id="reservation-time-filtro"
+                                                            class="calendarDetectado form-control" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                        <label class="form-checkbox-control">
+                                            <input type="checkbox" name="checkbox" id="chkFiltroStatus"
+                                                onclick="FiltroStatus()" />Status
+                                        </label>
+                                        <select disabled="disabled" id="selectFiltroStatus"
+                                            style="min-height: 34px;  width: 100%;"
+                                            class="js-example-basic-single"></select>
+                                        </select>
+                                                  
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                        <label class="form-checkbox-control">
+                                            <input type="checkbox" name="checkbox" id="chkFiltroLogradouro"
+                                                onclick="FiltroLogradouro()" />Logradouro
+                                        </label>
+                                        <select disabled="disabled" id="selectLogradouro"
+                                            style="min-height: 34px;  width: 100%;"
+                                            class="js-example-basic-single"></select>
+                                        </select>
+                                                  
+                                    </div>
+
+                                    <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                                        <label class="form-checkbox-control">
+                                            <input type="checkbox" name="checkbox" id="chkFiltroSetor"
+                                                disabled="disabled" onclick="FiltroSetor()" />Setor
+                                        </label>
+                                        <select disabled="disabled" id="selectSetor"
+                                            style="min-height: 34px;  width: 100%;"
+                                            class="js-example-basic-single"></select>
+                                        </select>
+                                                  
+                                    </div>
+
+                                    <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                                        <label class="form-checkbox-control">
+                                            <input type="checkbox" name="checkbox" id="chkFiltroVaga"
+                                                disabled="disabled" onclick="FiltroVaga()" />Vaga
+                                        </label>
+                                        <select disabled="disabled" id="selectVaga"
+                                            style="min-height: 34px;  width: 100%;"
+                                            class="js-example-basic-single"></select>
+                                        </select>
+                                                  
+                                    </div>
+
+                                    <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                                        <label class="form-checkbox-control">
+                                            <input type="checkbox" name="checkbox" id="chkFiltroPagamento"
+                                                onclick="FiltroPagamento()" />Pagamento
+                                        </label>
+                                        <select disabled="disabled" id="selectPagamento"
+                                            style="min-height: 34px;  width: 100%;"
+                                            class="js-example-basic-single">
+                                            <option>Com Pagamento</option>
+                                            <option>Sem Pagamento</option>
+                                        </select>
+                                                  
+                                    </div>
+
+                                    <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                                        <label class="form-checkbox-control">
+                                            <input type="checkbox" name="checkbox" id="chkFiltroConcedido"
+                                                onclick="FiltroConcedido()" />Tempo Concedido
+                                        </label>
+                                        <select disabled="disabled" id="selectConcedido"
+                                            style="min-height: 34px;  width: 100%;"
+                                            class="js-example-basic-single"></select>
+                                        </select>
+                                                  
+                                    </div>
+
+                                    <div class="col-sm-12 group">
+                                        <button type="button" id="btnFiltraIntervaloCompra" onclick="ExecutaFiltros()"
+                                            class="btn btn-success" disabled="disabled">Filtrar</button>
+                                        <!-- <button type="button" class="btn btn-info"></button> -->
+                                    </div>
+
+                                </div>
                             </div>
+                        </div>
+                    </div>
 
-
-
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Gestão de Vagas
-                                        Ocupacão<small>CigoGE</small></h2>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card-box table-responsive" style="min-height: 750px !important;"
-                                                id="Tabela">
-                                                <!-- <table id="tblVagas" class="display" style="width: 100%;"> 
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Gestão de Vagas
+                                Ocupacão<small>CigoGE</small></h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card-box table-responsive" style="min-height: 750px !important;"
+                                        id="Tabela">
+                                        <!-- <table id="tblVagas" class="display" style="width: 100%;"> 
                                                     <thead>
                                                         <tr>
                                                             <th>Logradouro</th>
@@ -406,17 +457,17 @@
 
                                                     </tbody>
                                                 </table> -->
-                                            </div>
-                                        </div>
                                     </div>
-
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <!-- /page content -->
 
@@ -518,31 +569,261 @@
 
 <script>
     $(document).ready(function () {
-        //   $("checkboxFiltro").attr('disabled','disabled');
-        CarregaTabelaVagas();
-        TimerRelogio();
-        document.getElementById("reservation-time").value = "";
+        $('#selectPagamento').select2();
+        // carrega logroudouros .-.<3
+        $('#selectLogradouro').select2();
+        $("#selectLogradouro").empty();
+        $('#selectLogradouro').val(null).trigger('change');
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: 'https://66.94.96.208/API_CigoEstacionamento/vagasocupacao/listar/listalogradouros',
+            dataType: 'json',
+            data: "",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var newOption = new Option(data[i].logradouro);
+                        $('#selectLogradouro').append(newOption).trigger('change');
+                    }
+                }
+            },
+            error: function (data) {
+                alert("Falha inesperada!");
+            }
+        });
+        //carrega numeros(vagas) select
+        $('#selectVaga').select2();
+        $("#selectVaga").empty();
+        $('#selectVaga').val(null).trigger('change');
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: 'https://66.94.96.208/API_CigoEstacionamento/vagasocupacao/listar/listavagas',
+            dataType: 'json',
+            data: "",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var newOption = new Option(data[i].numero);
+                        $('#selectVaga').append(newOption).trigger('change');
+                    }
+                }
+            },
+            error: function (data) {
+                alert("Falha inesperada!");
+            }
+        });
+        // carrega quadras select
+        $('#selectSetor').select2();
+        $("#selectSetor").empty();
+        $('#selectSetor').val(null).trigger('change');
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: 'https://66.94.96.208/API_CigoEstacionamento/vagasocupacao/listar/listaquadras',
+            dataType: 'json',
+            data: "",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var newOption = new Option(data[i].quadra);
+                        $('#selectSetor').append(newOption).trigger('change');
+                    }
+                }
+            },
+            error: function (data) {
+                alert("Falha inesperada!");
+            }
+        });
+
+        // carrega status vagas select
+        $('#selectFiltroStatus').select2();
+        $("#selectFiltroStatus").empty();
+        $('#selectFiltroStatus').val(null).trigger('change');
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: 'https://66.94.96.208/API_CigoEstacionamento/vagasocupacao/listar/listastatusvagas',
+            dataType: 'json',
+            data: "",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var newOption = new Option(data[i].statusVagaDisponivel);
+                        $('#selectFiltroStatus').append(newOption).trigger('change');
+                    }
+                }
+            },
+            error: function (data) {
+                alert("Falha inesperada!");
+            }
+        });
+        //https://66.94.96.208/API_CigoEstacionamento/vagasocupacao/listar/portempoconcedido    $('#selectConcedido').select2();
+        // carrega tempos concedido select
+        $('#selectConcedido').select2();
+        $("#selectConcedido").empty();
+        $('#selectConcedido').val(null).trigger('change');
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: 'https://66.94.96.208/API_CigoEstacionamento/vagasocupacao/listar/portempoconcedido ',
+            dataType: 'json',
+            data: "",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var newOption = new Option(data[i].tempoConcedido);
+                        $('#selectConcedido').append(newOption).trigger('change');
+                    }
+                }
+            },
+            error: function (data) {
+                alert("Falha inesperada!");
+            }
+        });
+
     });
 
 
+    $(document).ready(function () {
+        //   $("checkboxFiltro").attr('disabled','disabled');
+        CarregaTabelaVagas();
+        TimerRelogio();
+    });
 
-    function FiltraPorIntervaloCompra() {
+    function FiltroPorIntervaloCompra() {
+        if (document.getElementById("chkFiltroIntervaloCompra").checked == true) {
+            $("#reservation-time").prop('disabled', false);
+            $("#btnFiltraIntervaloCompra").prop('disabled', false);
+            document.getElementById("reservation-time").value = dateNow;
+        }
+        else {
+            $("#reservation-time").prop('disabled', true);
+            $('#tblVagas').DataTable().clear().destroy();
+            document.getElementById("Tabela").innerHTML = '<table id="tblVagas" class="display" style="width: 100%;"><thead><tr><th>Logradouro</th><th>Status da Vaga</th><th>Placa</th><th>Data/Hora Compra</th><th>Data/Hora Detectado</th><th>Tempo em Permanencia</th><th>Tempo Concedido</th><th>Setor</th><th>Vaga</th><th>Total Pago</th></tr></thead><tbody id="tbody"></tbody></table>';
+            CarregaTabelaVagas();
+
+        }
+    }
+
+    function FiltroPorIntervaloDetectado() {
+        //chkFiltroIntervaloDetectado
+        if (document.getElementById("chkFiltroIntervaloDetectado").checked == true) {
+            $("#reservation-time-filtro").prop('disabled', false);
+            $("#btnFiltraIntervaloCompra").prop('disabled', false);
+            document.getElementById("reservation-time-filtro").value = dateNow;
+        }
+        else {
+            $("#reservation-time-filtro").prop('disabled', true);
+            $('#tblVagas').DataTable().clear().destroy();
+            document.getElementById("Tabela").innerHTML = '<table id="tblVagas" class="display" style="width: 100%;"><thead><tr><th>Logradouro</th><th>Status da Vaga</th><th>Placa</th><th>Data/Hora Compra</th><th>Data/Hora Detectado</th><th>Tempo em Permanencia</th><th>Tempo Concedido</th><th>Setor</th><th>Vaga</th><th>Total Pago</th></tr></thead><tbody id="tbody"></tbody></table>';
+            CarregaTabelaVagas();
+
+        }
+    }
+
+    function FiltroStatus() {
+        //chkFiltroIntervaloDetectado
+        if (document.getElementById("chkFiltroStatus").checked == true) {
+            $("#selectFiltroStatus").prop('disabled', false);
+        }
+        else {
+            $("#selectFiltroStatus").prop('disabled', true);
+        }
+    }
+
+    function FiltroPagamento() {
+        //chkFiltroIntervaloDetectado
+        if (document.getElementById("chkFiltroPagamento").checked == true) {
+            $("#selectPagamento").prop('disabled', false);
+        }
+        else {
+            $("#selectPagamento").prop('disabled', true);
+        }
+    }
+
+    function FiltroLogradouro() {
+        if (document.getElementById("chkFiltroLogradouro").checked == true) {
+            $("#selectLogradouro").prop('disabled', false);
+            $("#chkFiltroSetor").prop('disabled', false);
+            $("#chkFiltroVaga").prop('disabled', false);
+        }
+        else {
+            $("#selectLogradouro").prop('disabled', true);
+            $("#selectSetor").prop('disabled', true);
+            $("#selectVaga").prop('disabled', true);
+            $("#chkFiltroSetor").prop('disabled', true);
+            $("#chkFiltroVaga").prop('disabled', true);
+        }
+    }
+
+    function FiltroSetor() {
+        //chkFiltroIntervaloDetectado
+        if (document.getElementById("chkFiltroSetor").checked == true) {
+            $("#selectSetor").prop('disabled', false);
+        }
+        else {
+            $("#selectSetor").prop('disabled', true);
+        }
+    }
+    function FiltroVaga() {
+        //chkFiltroIntervaloDetectado
+        if (document.getElementById("chkFiltroVaga").checked == true) {
+            $("#selectVaga").prop('disabled', false);
+        }
+        else {
+            $("#selectVaga").prop('disabled', true);
+        }
+    }
+
+    function FiltroConcedido() {
+        //chkFiltroIntervaloDetectado
+        if (document.getElementById("chkFiltroConcedido").checked == true) {
+            $("#selectConcedido").prop('disabled', false);
+        }
+        else {
+            $("#selectConcedido").prop('disabled', true);
+        }
+    }
+
+    function ExecutaFiltros() {
+
         var dataHoraInicialFinal = document.getElementById("reservation-time").value
+
         var DataHoraInicial = dataHoraInicialFinal.split("-")[0].trim()
+        DataHoraInicial = DataHoraInicial.substring(DataHoraInicial, DataHoraInicial.length - 3)
+
         var DataHoraFinal = dataHoraInicialFinal.split("-")[1].trim()
+        DataHoraFinal = DataHoraFinal.substring(DataHoraFinal, DataHoraFinal.length - 3)
+
+
+        var dataHoraInicialFinalDetectado = document.getElementById("reservation-time-filtro").value
+
+        var DataHoraInicialDetectado = dataHoraInicialFinalDetectado.split("-")[0].trim()
+        DataHoraInicialDetectado = DataHoraInicialDetectado.substring(DataHoraInicialDetectado, DataHoraInicialDetectado.length - 3)
+
+        var DataHoraFinalDetectado = dataHoraInicialFinalDetectado.split("-")[1].trim()
+        DataHoraFinalDetectado = DataHoraFinalDetectado.substring(DataHoraFinalDetectado, DataHoraFinalDetectado.length - 3)
+
+
 
         $('#tblVagas').DataTable().clear().destroy();
-        document.getElementById("Tabela").innerHTML = '<table id="tblVagas" class="display" style="width: 100%;"><thead><tr><th>Logradouro</th><th>Status da Vaga</th><th>Placa</th><th>Data/Hora Compra</th><th>Data/Hora Detectado</th><th>Tempo em Permanencia</th><th>Tempo Concedido</th><th>Setor</th><th>Vaga</th><th>Total Pago</th></tr></thead><tbody id="tbody"></tbody></table>';
-
+        document.getElementById("Tabela").innerHTML = '';
 
         $.ajax({
             type: 'GET',
-            url: 'https://localhost:7109/vagasocupacao/listar/listarpesquisaintervalo?ini=' + DataHoraInicial + '&fim=' + DataHoraFinal,
+            url: 'https://66.94.96.208/API_CigoEstacionamento/vagasocupacao/listar/pesquisa?DataHoraCompraInicio=01%2F01%2F2024&DataHoraCompraFim=21%2F03%2F2024',
             dataType: 'json',
             data: '{}',
             contentType: "application/json; charset=utf-8",
             success: function (data) {
-                data = data;
+        
                 if (data != "") {
                     let i = 0;
                     var TotalVagas = 0;
@@ -654,7 +935,7 @@
                         document.getElementById("PercentualVagasIndisponiveis").innerHTML = PercVagasIndisponiveis[0] + "." + PercVagasIndisponiveis[1].substring(0, 2) + '%';
                     }
                     else {
-                        document.getElementById("TotalVagasIndisponiveis").innerHTML = PercVagasIndisponiveis[0] + '%';
+                        document.getElementById("PercentualVagasIndisponiveis").innerHTML = PercVagasIndisponiveis[0] + '%';
                     }
 
                     PercVagasProvaveis = (TotalVagasProvaveis / TotalVagas * 100).toString().split(".");
@@ -976,36 +1257,6 @@
             }
         });
     }
-
-    function FiltroPorIntervaloCompra() {
-        if (document.getElementById("chkFiltroIntervaloCompra").checked == true) {
-            $("#reservation-time").prop('disabled', false);
-            $("#btnFiltraIntervaloCompra").prop('disabled', false);
-            document.getElementById("reservation-time").value = dateNow;
-        }
-        else {
-            $("#reservation-time").prop('disabled', true);
-            $("#btnFiltraIntervaloCompra").prop('disabled', true);
-            document.getElementById("reservation-time").value = "";
-            $('#tblVagas').DataTable().clear().destroy();
-            document.getElementById("Tabela").innerHTML = '<table id="tblVagas" class="display" style="width: 100%;"><thead><tr><th>Logradouro</th><th>Status da Vaga</th><th>Placa</th><th>Data/Hora Compra</th><th>Data/Hora Detectado</th><th>Tempo em Permanencia</th><th>Tempo Concedido</th><th>Setor</th><th>Vaga</th><th>Total Pago</th></tr></thead><tbody id="tbody"></tbody></table>';
-            CarregaTabelaVagas();
-
-        }
-    }
-
-    /* $(document).ready(function () {
-          $('.select-logradouro').select2();
-          $('.select-setor').select2();
-          $('.select-vaga').select2();
-          $('.select-status').select2();
-          $('.select-pago').select2();
-          
-          CarregaLogradouros();
-          CarregaSetores();
-          CarregaVagas();
-      });*/
-
     /*  
     function chkFiltraSetor() {
         if (document.getElementById("chkSetor").checked == true) {
@@ -1582,7 +1833,7 @@
         document.getElementById("date").innerHTML = date;
         document.getElementById(" ")
         var time = setTimeout(function () { TimerRelogio() }, 1000);
-        if (curDay.length = 1) {
+        if (curDay.length == 1) {
             curDay = "0" + curDay;
         }
 
@@ -1625,7 +1876,13 @@
             }
         }
 
-        dateNow = curDay + "/" + monthNowNumber + "/" + curYear + " " + "00" + ":" + "00" + " AM" + " - " + curDay + "/" + monthNowNumber + "/" + curYear + " " + hr + ":" + min + "";
+        if (Number(hr) >= 12) {
+            dateNow = "01/" + "01/" + curYear + " 00" + ":" + "00" + " AM" + " - " + curDay + "/" + monthNowNumber + "/" + curYear + " " + hr + ":" + min + " PM";
+        }
+        else {
+            dateNow = "01/" + "01/" + curYear + " 00" + ":" + "00" + " AM" + " - " + curDay + "/" + monthNowNumber + "/" + curYear + " " + hr + ":" + min + " AM";
+        }
+
     }
 
     function checkTime(i) {
