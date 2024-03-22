@@ -893,7 +893,7 @@
         }
     }
 
-    function SelecionouUsuario() {
+    function SelecionouUsuarioOperador() {
         if (NaoEncontrou == true && Filtrou == true){
             NaoEncontrou = false;
             Filtrou = false;
@@ -914,10 +914,8 @@
     var Filtrou = false;
     var NaoEncontrou = false;
     function FiltraPorIntervaloCompra() {
-        if ($('#Tabela').innerHTML != "" || $('#tblHistoricoCompras').innerHTML != "") {
         $('#Tabela').innerHTML = "";
         $('#tblHistoricoCompras').DataTable().clear().destroy();
-        }
         Filtro = false;
         //CarregaTabelaHistoricoCompras();
         var urlFiltros = 'https://66.94.96.208/API_CigoEstacionamento/listar';
@@ -967,9 +965,9 @@
         if (document.getElementById("chkFiltroTipoCompra").checked == true) {
             if (Filtro == true) {
                 urlFiltros = urlFiltros + "&";
-                urlFilros = urlFiltros + 'TipoCompra=' + document.getElementById('SelectTipoCompra');
+                urlFiltros = urlFiltros + 'TipoCompra=' + document.getElementById('SelectTipoCompra').value;
             } else {
-                urlFilros = urlFiltros + '/pesquisas?TipoCompra=' + document.getElementById('SelectTipoCompra');
+                urlFiltros = urlFiltros + '/pesquisas?TipoCompra=' + document.getElementById('SelectTipoCompra').value;
             }
         }
 
@@ -1032,8 +1030,7 @@
                     var PercDinheiro = 0
                     var PercBoleto = 0;
 
-                    document.getElementById("Tabela").innerHTML = '<table id="tblHistoricoCompras" class="display" style="width: 100%;"> <thead> <tr><th>Datas</th> <th>Tipo de Compra</th> <th>Forma de Pagamento</th> <th>Origem do Ponto de Venda</th> <th>Valor</th>  <th>CPF</th> <th>Usuario Operador</th></tr> </thead><tbody id="tbody"></tbody></table>';
-
+                
                     while (data[i]) {
                         let lst = data[i];
 
