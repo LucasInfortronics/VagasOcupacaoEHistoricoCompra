@@ -1037,11 +1037,12 @@
                     while (data[i]) {
                         let lst = data[i];
 
-                        var valorInteiro = "R$" + lst.valor;
-                        var posVirgula = valorInteiro.indexOf(",") + 1;
-                        var valorFormatado = valorInteiro.substring(0, posVirgula + 2);
+                        indexOf = lst.valor.indexOf(".");
+                        var Valor = "R$" + lst.valor.substring(0, indexOf)
+                        var ValorCVirgula = lst.valor.substring(indexOf, indexOf + 3);
+                        var ValorCompleto = Valor + ValorCVirgula
 
-                        let tr = `<tr><td>${lst.dataHoraCompra}</td><td>${lst.tipoDeCompra}</td><td>${lst.formaPagamento}</td><td>${lst.origemPontoVenda}</td><td>${valorFormatado}</td><td>${lst.cpf}</td><td>${lst.name}</td></tr>`
+                        let tr = `<tr><td>${lst.dataHoraCompra}</td><td>${lst.tipoDeCompra}</td><td>${lst.formaPagamento}</td><td>${lst.origemPontoVenda}</td><td>${ValorCompleto}</td><td>${lst.cpf}</td><td>${lst.name}</td></tr>`
                         $("#tblHistoricoCompras").append(tr)
 
                         if (lst.formaPagamento != "") {
@@ -1439,13 +1440,13 @@
                     var PercBoleto = 0;
 
                     while (data[i]) {
-                        let lst = data[i];
+                        lst = data[i]
+                        var indexOf = lst.valor.indexOf(".");
+                        var Valor = "R$" + lst.valor.substring(0, indexOf)
+                        var ValorCVirgula = lst.valor.substring(indexOf, indexOf + 3);
+                        var ValorCompleto = Valor + ValorCVirgula
 
-                        var valorInteiro = "R$" + lst.valor;
-                        var posVirgula = valorInteiro.indexOf(",") + 1;
-                        var valorFormatado = valorInteiro.substring(0, posVirgula + 2);
-
-                        let tr = `<tr><td>${lst.dataHoraCompra}</td><td>${lst.tipoDeCompra}</td><td>${lst.formaPagamento}</td><td>${lst.origemPontoVenda}</td><td>${valorFormatado}</td><td>${lst.cpf}</td><td>${lst.name}</td></tr>`
+                        let tr = `<tr><td>${lst.dataHoraCompra}</td><td>${lst.tipoDeCompra}</td><td>${lst.formaPagamento}</td><td>${lst.origemPontoVenda}</td><td>${ValorCompleto}</td><td>${lst.cpf}</td><td>${lst.name}</td></tr>`
                         $("#tblHistoricoCompras").append(tr)
 
                         if (lst.formaPagamento != "") {
