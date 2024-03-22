@@ -928,6 +928,7 @@
                 urlFiltros = urlFiltros + "&";
                 urlFiltros = urlFiltros + 'ini=' + DataHoraInicial + '&fim=' + DataHoraFinal;
             } else {
+                Filtro = true;
                 urlFiltros = urlFiltros + '/pesquisas?DataInicio=' + DataHoraInicial + '&DataFim=' + DataHoraFinal;
             }
         }
@@ -967,6 +968,7 @@
                 urlFiltros = urlFiltros + "&";
                 urlFiltros = urlFiltros + 'TipoCompra=' + document.getElementById('SelectTipoCompra').value;
             } else {
+                Filtro = true;
                 urlFiltros = urlFiltros + '/pesquisas?TipoCompra=' + document.getElementById('SelectTipoCompra').value;
             }
         }
